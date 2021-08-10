@@ -986,7 +986,7 @@ footer {
   }
   .nav-ul {
     flex-wrap: wrap;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
   .intro-text h1 {
     font-size: 5rem;
@@ -1069,5 +1069,8 @@ footer {
   }
   .heading-3 {
     font-weight: 500;
+  }
+  body .testimonial .row .carousel h1 {
+    font-size: 34px;
   }
 }

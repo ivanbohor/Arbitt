@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega 3</title>
+    <title>Registrate</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,24 +17,28 @@
 	<body>
 		<header>
 			<nav>
-				<div class="container"> </div>
-					<!-- LOGO -->
-					<a href="../index.html"> <img class="logo" src="../images/logo1a de pantalla 2021-07-12 000519.png "alt="logo"> </a>
-					<!-- NAVIGATION -->
-					<ul class="nav-ul">
-						<i class="fas fa-times close"></i>
-						<li><a href="../index.html" class="nav-link current">Home</a></li>
-						<li><a href="../pages/servicios.html" class="nav-link">Servicios</a></li>
-						<li><a href="../pages/sobrenos.html" class="nav-link">Sobre Nosotros</a></li>
-						<li><a href="../pages/registrarse.html" class="nav-link">Registrarse</a></li>
-						<li><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
-					</ul>
-					<i class="fas fa-search search"></i>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-12 col-lg-12 col-xl-8">
+							<!-- LOGO -->
+							<a href="../index.html"> <img class="logo" src="../images/logo1a de pantalla 2021-07-12 000519.png "alt="logo"> </a>
+							<!-- NAVIGATION -->
+						</div>    
+						<div class="col-xs-12 col-md-12 col-lg-12 col-xl-4"> 
+							<ul class="nav-ul">
+								<li><a href="./index.html" class="nav-link current">Home</a></li>
+								<li><a href="../pages/servicios.html" class="nav-link">Servicios</a></li>
+								<li><a href="../pages/sobrenos.html" class="nav-link">Sobre Nosotros</a></li>
+								<li><a href="../pages/registrarse.html" class="nav-link">Registrarse</a></li>
+								<li><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
+							</ul>
+						</div>      
+					</div>    
 				</div>
 			</nav>
-		</header> 
-		<main>  
-		    <div class="registForm">
+		</header>
+		<main>
+			<div class="registForm">
 					<h2>Es hora, Crea Tu Cuenta! o bien, Inicia Sesion</h2>
 				<div class="container" id="container">
 					<div class="form-container sign-up-container">
@@ -79,13 +87,31 @@
 					</div>
 				</div>
 			</div>    
-		</main> 	
-		<!-- contact footer -->
-		<footer class="footCo">
-			<p>2021 &copy; ArBitt by Ivan olivera. All Rights Reserved</p>
+			<!-- contact footer -->
+			<section id="contact">
+				<div class="container">
+					<div class="contact">
+						<!-- icons -->
+						<div class="contact-icon">
+							<i class="fab fa-facebook-f"> <img
+							src="../images/twwwiconfinder-social-media-applications-6twitter-4102580_113802.svg"></i>
+							<i class="fab fa-instagram"> <img src="../images/facebook_icon-icons.com_53612.svg"> </i>
+							<i class=" fab fa-github"> <img src="../images/FBBBBTITTWER1497619954-jd03_85156 (3).svg"> </i>
+						</div>
+						<!-- text -->
+						<h3>Seguinos en las Redes</h3>
+						<!-- button -->
+						<a href="../pages/contacto.html" class="btn btn-dark">Contactar con ArBitt</a>
+					</div>
+				</div>
+			</section>
+		</main>	
+		<footer>
+			<div class="container">
+				<p>2021 &copy; ArBitt by Ivan olivera. All Rights Reserved</p>
+			</div>
 		</footer>
 		<script type="text/javascript" src="../scripts/scripts.js"> </script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script src="script.js"></script>
 	</body>
 </html>

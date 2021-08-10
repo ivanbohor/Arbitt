@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega 3</title>
+    <title>Servicios</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -17,20 +17,24 @@
     <body>
       <header>
         <nav>
-          <div class="container"> </div>
-            <!-- LOGO -->
-            <a href="../index.html"> <img class="logo" src="../images/logo1a de pantalla 2021-07-12 000519.png "alt="logo"> </a>
-            <!-- NAVIGATION -->
-            <ul class="nav-ul">
-              <i class="fas fa-times close"></i>
-              <li><a href="../index.html" class="nav-link current">Home</a></li>
-              <li><a href="../pages/servicios.html" class="nav-link">Servicios</a></li>
-              <li><a href="../pages/sobrenos.html" class="nav-link">Sobre Nosotros</a></li>
-              <li><a href="../pages/registrarse.html" class="nav-link">Registrarse</a></li>
-              <li><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
-            </ul>
-            <i class="fas fa-search search"></i>
-          </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 col-lg-12 col-xl-8">
+                        <!-- LOGO -->
+                        <a href="../index.html"> <img class="logo" src="../images/logo1a de pantalla 2021-07-12 000519.png "alt="logo"> </a>
+                        <!-- NAVIGATION -->
+                    </div>    
+                    <div class="col-xs-12 col-md-12 col-lg-12 col-xl-4"> 
+                        <ul class="nav-ul">
+                            <li><a href="../index.html" class="nav-link current">Home</a></li>
+                            <li><a href="../pages/servicios.html" class="nav-link">Servicios</a></li>
+                            <li><a href="../pages/sobrenos.html" class="nav-link">Sobre Nosotros</a></li>
+                            <li><a href="../pages/registrarse.html" class="nav-link">Registrarse</a></li>
+                            <li><a href="../pages/contacto.html" class="nav-link">Contacto</a></li>
+                        </ul>
+                    </div>      
+                </div>    
+            </div>
         </nav>
       </header>
      <main>   
@@ -77,11 +81,61 @@
             </a>
           </div>
         </div>
-        <section id="movilSer">
-          <div class="movilServ">
-            <h2><b>Proximamente vas a poder disfrutar de todos los beneficios desde la App movil de ArBitt</b></h2>
-              <img src="../images/android-icon.svg" alt="android store">
-              <img src="../images/vectorpaint.png"   alt="apple store">
+        </section>
+        <section class="testimonial">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 d-none d-lg-block">
+                      <ol class="carousel-indicators tabs">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                              <figure>
+                                  <img src="../images/minnwwman-4702060_640.jpg" class="rounded-circle" alt="testimonios">
+                              </figure>
+                          </li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                              <figure>
+                                  <img src="../images/menentrepreneur-593358_640.jpg"  class="rounded-circle" alt="testimonios">
+                              </figure>
+                          </li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                              <figure>
+                                  <img src="../images/smman-4749237_640.jpg" class="rounded-circle" alt="testimonios">
+                              </figure>
+                          </li>
+                      </ol>
+                  </div>
+                  <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                      <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+                        <h3>Lo que dicen nuestros Usuarios</h3>
+                        <h1>Testimonios</h1>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="quote-wrapper">
+                                  <p>"La plataforma Arbitt es muy facil de usar e intuitiva! Puedo administrar facilmente mis cryptos"</p>
+                                  <h3>Emilia</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="quote-wrapper">
+                                  <p>"La aplicacion es muy segura y confiable, ante el menor inconveniente su equipo responde de manera eficiente"</p>
+                                  <h3>Matias</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="quote-wrapper">
+                                <p>"Sin duda la recomiendo, puedo lllevar el control de todo en pocos clicks"</p>
+                                <h3>Peter</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <ol class="carousel-indicators indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          </ol>
+                      </div>
+                   </div>
+               </div>
           </div>
         </section>
         <!-- contact footer -->
@@ -98,14 +152,14 @@
                 <!-- text -->
                 <h3>Seguinos en las Redes</h3>
                 <!-- button -->
-                <a href="./pages/contacto.html" class="btn btn-dark">Contactarme con ArBitt</a>
+                <a href="../pages/contacto.html" class="btn btn-dark">Contactar con ArBitt</a>
             </div>
           </div>
         </section>
       </main>
       <footer>
         <div class="container">
-            <p>2021 &copy; ArBitt by Ivan olivera. All Rights Reserved</p>
+          <p>2021 &copy; ArBitt by Ivan olivera. All Rights Reserved</p>
         </div>
       </footer>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

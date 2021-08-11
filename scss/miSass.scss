@@ -1,16 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-:root {
-  --white: #fff;
-  --black: #000;
-  --blue: #31326f;
-  --light-blue: #258aff;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --color-grey: #e3eef8;
-  --light-grey: #ccc;
-  --dark-grey: #222831;
-  --pink: #f9ba4d;
+//colors //
+$white: #fff;
+$black: #000;
+$blue: #31326f;
+$lightblue: #258aff;
+$colorpri: #9d0191;
+$colorsec: #db6400;
+$colorgrey: #e3eef8;
+$lightgrey: #ccc;
+$darkgrey: #222831;
+$colordora: #f9ba4d;
+
+//mixis//
+@mixin fontStyle {
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
+
+@mixin styleBotton {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $white;
+  border: 2px solid $colordora;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+//reset //
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +49,7 @@ body {
 }
 
 p {
-  font-size: 1.6rem;
-  line-height: 1.5;
+  @include fontStyle();
 }
 
 img {
@@ -45,17 +65,16 @@ section {
 
 .container {
   width: 100%;
-  /*max-width: 110rem;*/
   margin: 0 auto;
   padding: 0 2rem;
-}
-img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 /* NAVIGATION SECTION */
 header {
   width: 100%;
-  background-color: var(--black);
+  background-color: $black;
   padding: 5px 0;
 }
 nav {
@@ -64,12 +83,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-}
-
-nav .logo {
-  width: 50rem;
-  position: relative;
-  left: 3rem;
+  .logo {
+    width: 50rem;
+    position: relative;
+    left: 3rem;
+  }
 }
 .nav-ul {
   display: flex;
@@ -77,16 +95,16 @@ nav .logo {
   justify-content: center;
   list-style: none;
   padding-top: 4rem;
-}
-.nav-ul li a {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 0;
-  margin-left: 4rem;
-  color: #fff;
+  li a {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 0;
+    margin-left: 4rem;
+    color: #fff;
+  }
 }
 .nav-link,
 .current {
@@ -100,7 +118,7 @@ nav .logo {
   bottom: -3px;
   width: 50%;
   height: 2px;
-  background-color: var(--pink);
+  background-color: $colordora;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.6s;
@@ -138,17 +156,16 @@ nav .logo {
 /* INTRO SECTION */
 #intro {
   width: 100%;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: $black;
+  color: $white;
   padding: 20px;
   z-index: -2;
-}
-
-#intro .container {
-  background: url(./images/hero_02.jpg) no-repeat;
-  background-size: 50%;
-  background-position-x: 70%;
-  /* z-index: -2; */
+  .container {
+    background: url(./images/hero_02.jpg) no-repeat;
+    background-size: 50%;
+    background-position-x: 70%;
+    /* z-index: -2; */
+  }
 }
 .line {
   position: relative;
@@ -157,25 +174,15 @@ nav .logo {
 .intro-text {
   width: 80%;
   padding: 0rem 0px 4px;
-}
-.intro-text h1 {
-  font-size: 8rem;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 5rem;
+  h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5rem;
+  }
 }
 .btn {
-  display: inline-block;
-  padding: 1.5rem 3rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--white);
-  border: 2px solid var(--pink);
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  text-decoration: none;
+  @include styleBotton();
 }
 .btn-dark {
   background-color: transparent;
@@ -188,13 +195,13 @@ nav .logo {
   left: 0;
   width: 99.5%;
   height: 100%;
-  background-color: var(--pink);
+  background-color: $colordora;
   z-index: -1;
   transform: translateX(-100%);
   transition: all 0.4s;
 }
 .btn:hover::before {
-  /* background-color: var(--pink); */
+  /* background-color: var($colordora); */
   transform: translateX(0);
 }
 /* INTRO CARD */
@@ -209,13 +216,13 @@ nav .logo {
   z-index: 1;
 }
 .card {
-  background-color: var(--dark-grey);
+  background-color: $darkgrey;
   padding: 3rem 4rem;
-}
-.card i {
-  font-size: 4rem;
-  color: var(--pink);
-  padding-bottom: 3rem;
+  i {
+    font-size: 4rem;
+    color: $colordora;
+    padding-bottom: 3rem;
+  }
 }
 .heading-3 {
   font-size: 3.3rem;
@@ -230,7 +237,7 @@ nav .logo {
 /* lineas alrededor de la tercera tarjeta */
 .card:nth-child(3) {
   position: relative;
-  background-color: var(--dark-grey);
+  background-color: $darkgrey;
 }
 .card:nth-child(3)::before {
   position: absolute;
@@ -239,22 +246,22 @@ nav .logo {
   bottom: -1.5rem;
   width: 105%;
   height: 7rem;
-  background-color: var(--pink);
+  background-color: $colordora;
   z-index: -1;
 }
 /* Card hover effect */
 .card:hover,
 .card:first-child {
-  background-color: var(--pink);
-  color: var(--white);
+  background-color: $colordora;
+  color: $white;
 }
 .card:hover i,
 .card:first-child i {
-  color: var(--white);
+  color: $white;
 }
 .card:hover .line::before,
 .card:first-child .line::before {
-  background-color: var(--white);
+  background-color: $white;
 }
 
 /* Carrousel index*/
@@ -277,7 +284,7 @@ body .testimonial .row .tabs li.active::before {
   content: "";
   width: 50px;
   height: 50px;
-  background-color: var(--pink);
+  background-color: $colordora;
   border-radius: 50%;
 }
 body .testimonial .row .tabs li.active::after {
@@ -285,7 +292,7 @@ body .testimonial .row .tabs li.active::after {
   content: "";
   width: 30px;
   height: 30px;
-  background-color: var(--pink);
+  background-color: $colordora;
   border-radius: 50%;
 }
 body .testimonial .row .tabs li:nth-child(1) {
@@ -443,11 +450,11 @@ body
   font-size: 5rem;
   font-weight: 700;
   margin-top: 4rem;
-}
-.heading p {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--pink);
+  p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $colordora;
+  }
 }
 /* Servicios section  carousel*/
 .carousel-inner img {
@@ -460,16 +467,16 @@ body
   margin: 0rem;
   padding: 0rem;
   margin-top: 0rem !important;
-}
-.container.mt-3 h2 {
-  font-size: 5rem;
+  h2 {
+    font-size: 5rem;
+  }
 }
 .container.mt-3 h3 {
   font-size: 5rem;
-  font-style: var(--white);
+  font-style: $white;
 }
 .container.mt-3 p {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .carousel-caption {
   position: absolute;
@@ -503,11 +510,12 @@ body
 .about-text h3 {
   padding-bottom: 1rem;
   font-size: 3rem;
+  p {
+    color: #777;
+    padding-bottom: 1rem;
+  }
 }
-.about-text p {
-  color: #777;
-  padding-bottom: 1rem;
-}
+
 .about-text img {
   display: none;
 }
@@ -566,7 +574,7 @@ ul {
 }
 
 .nosTeam {
-  background-color: var(--black);
+  background-color: $black;
 }
 .nosTeam .cnt-block {
   float: left;
@@ -663,7 +671,7 @@ ul {
 .registForm button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
-  background-color: var(--pink);
+  background-color: $colordora;
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;
@@ -686,7 +694,7 @@ ul {
 }
 
 .registForm button.ghost {
-  background-color: var(--pink);
+  background-color: $colordora;
   border-color: #ffffff;
 }
 
@@ -780,7 +788,7 @@ ul {
   transform: translateX(-100%);
 }
 .registForm .overlay {
-  background: var(--dark-grey);
+  background: $darkgrey;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -859,14 +867,14 @@ ul {
   grid-auto-columns: min-content;
   justify-content: center;
   width: auto;
-}
-.formCon input {
-  width: 100%;
-  height: 13%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
+  input {
+    width: 100%;
+    height: 13%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+  }
 }
 .formCon textarea {
   width: auto;
@@ -881,31 +889,31 @@ ul {
 
 /* Contact us */
 #contact {
-  background-color: var(--dark-grey);
+  background-color: $darkgrey;
   padding: 3rem 0;
 }
 
 #contactSec {
-  background-color: var(--dark-grey);
+  background-color: $darkgrey;
 }
 
 .contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.contact i {
-  color: var(--white);
-  font-size: 2.5rem;
-  border: 2px solid var(--pink);
-  padding: 1rem;
-  width: 5rem;
-  height: 5rem;
-  text-align: center;
-  border-radius: 50%;
-  margin: 2px;
-  cursor: pointer;
-  transition: all 0.3s;
+  i {
+    color: $white;
+    font-size: 2.5rem;
+    border: 2px solid $colordora;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
 }
 .contact i:hover {
   transform: translateY(-1rem);
@@ -913,13 +921,13 @@ ul {
 .contact h2 {
   font-size: 5rem;
   font-weight: 700;
-  color: var(--white);
+  color: $white;
 }
 
 /* Footer section */
 footer {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: $black;
+  color: $white;
   padding: 3rem 0;
   text-align: center;
 }
@@ -977,12 +985,19 @@ footer {
   .row.heading h2 {
     font-size: 35.52px;
   }
+  #contactForm {
+    background-image: url(../images/email-marketing-2362038_1920.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0%;
+    background-position-y: 0%;
+  }
 }
 @media (max-width: 768px) {
   nav .logo {
-    width: 33rem;
+    width: 30rem;
     position: relative;
-    left: -1rem;
+    left: 0rem;
   }
   .nav-ul {
     flex-wrap: wrap;
@@ -1011,7 +1026,7 @@ footer {
     font-size: 2.2rem;
   }
   .container.mt-3 p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   #contact {
     padding: 1.2rem 0;
@@ -1022,18 +1037,28 @@ footer {
   body .testimonial {
     padding: 25px 0;
   }
+  body .testimonial .row .carousel h1 {
+    font-size: 30px;
+  }
   .registForm h2 {
     font-size: 24px;
   }
   .registForm h3 {
     font-size: 19px;
+    margin: 0rem;
+  }
+  .registForm p {
+    font-size: 16px;
   }
   .registForm form {
     padding: 0 10px;
   }
+  .registForm a {
+    margin: 7px 0;
+  }
   .registForm button {
-    padding: 12px 13px;
-    font-size: 16px;
+    padding: 10px 11px;
+    font-size: 14px;
   }
   .registForm .container {
     margin-bottom: 4rem;
@@ -1054,9 +1079,14 @@ footer {
     font-size: 33.52px;
   }
   #contactForm {
-    background-size: 87%;
-    margin: 1rem 0rem 2rem 1rem;
-    padding-top: 1rem;
+    background-image: url(../images/email-marketing-2362038_1920.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0%;
+    background-position-y: 0%;
+  }
+  .contacText {
+    margin-top: 1rem;
   }
   .contacText h2 {
     font-size: 36px;
@@ -1065,12 +1095,13 @@ footer {
     font-size: 26px;
   }
   .formCon {
-    justify-content: left;
+    justify-content: center;
+    margin-top: 2rem;
   }
   .heading-3 {
     font-weight: 500;
   }
-  body .testimonial .row .carousel h1 {
-    font-size: 34px;
+  section {
+    padding: 1rem 2rem 5rem;
   }
 }

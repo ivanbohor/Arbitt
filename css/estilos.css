@@ -7221,16 +7221,19 @@ section {
     width: 100%; }
 
 /* NAVIGATION SECTION */
+.navbar-nav .nav-item li {
+  margin: 1px !important;
+  padding: 1px !important; }
+
 header {
   width: 100%;
-  background-color: #000;
-  padding: 5px 0; }
+  background-color: #000; }
 
 .bg-dark {
   background-color: #000 !important; }
 
 .navbar-nav {
-  margin-right: 10rem !important; }
+  margin-right: 5rem !important; }
 
 .navbar-nav li:hover {
   background-color: #f9ba4d; }
@@ -7241,7 +7244,7 @@ header {
   margin: 1rem !important; }
 
 .navbar-brand img {
-  width: 90%;
+  width: 100%;
   margin-left: 9rem; }
 
 .navbar-toggler {
@@ -7252,7 +7255,7 @@ header {
   height: 2em; }
 
 .navbar-collapse {
-  margin-left: 1rem; }
+  margin-left: 4rem; }
 
 /* INTRO SECTION */
 #intro {
@@ -7346,16 +7349,6 @@ header {
 .card:nth-child(3) {
   position: relative;
   background-color: #222831; }
-
-.card:nth-child(3)::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -1.5rem;
-  width: 105%;
-  height: 7rem;
-  background-color: #f9ba4d;
-  z-index: -1; }
 
 /* Card hover effect */
 .card:hover,
@@ -7916,7 +7909,7 @@ ul {
   margin-left: 26rem;
   max-width: 1040px;
   padding-bottom: 7rem;
-  background-position-y: 2rem; }
+  background-position-y: 3rem; }
 
 .contacText h2 {
   font-size: 45px; }
@@ -7935,11 +7928,13 @@ ul {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+    padding: 1rem;
+    font-size: 1.5rem; }
 
 .formCon textarea {
-  width: auto;
-  padding: 12px 20px;
+  width: 358px;
+  padding: 1rem;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -7994,7 +7989,7 @@ footer {
   width: 5rem; }
 
 .contact-icon img:hover {
-  transform: scale(2.2, 2.2); }
+  transform: scale(1.5, 1.5); }
 
 .contact h3 {
   font-size: 3rem;
@@ -8004,8 +7999,12 @@ footer {
   html {
     font-size: 12px; }
   .navbar-brand img {
-    width: 100%;
-    margin-left: 4rem; }
+    width: 29rem;
+    margin-left: 0rem; }
+  .navbar-collapse {
+    margin-left: 0rem; }
+  .navbar-nav {
+    margin-right: 4rem !important; }
   .intro-text h1 {
     margin-top: 2rem; }
   .container.mt-3 h3 {
@@ -8040,8 +8039,11 @@ footer {
 
 @media (max-width: 768px) {
   .navbar-brand img {
-    width: 100%;
-    margin-left: 2rem; }
+    width: 25.3rem;
+    margin-left: 0rem; }
+  .navbar-toggler-icon {
+    width: 1.6em;
+    height: 1.5em; }
   .intro-text h1 {
     font-size: 5rem;
     margin-bottom: revert;
@@ -8110,7 +8112,8 @@ footer {
     font-size: 26px; }
   .formCon {
     justify-content: center;
-    margin-top: 2rem; }
+    margin-top: 3rem;
+    font-size: 2rem; }
   .heading-3 {
     font-weight: 500; }
   section {

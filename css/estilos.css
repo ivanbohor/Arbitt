@@ -7539,36 +7539,32 @@ body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper h
     color: #f9ba4d; }
 
 /* Servicios section  carousel*/
-.carousel-inner img {
-  width: 100%;
-  height: 100%; }
 
-.container.mt-3 {
-  width: 100%;
-  max-width: 132rem;
-  margin: 0rem;
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
   padding: 0rem;
-  margin-top: 0rem !important; }
-  .container.mt-3 h2 {
-    font-size: 5rem; }
+  margin: 0rem; }
+  .container-fluid .carousel-inner, .container-sm .carousel-inner, .container-md .carousel-inner, .container-lg .carousel-inner, .container-xl .carousel-inner {
+    height: 100vh;
+    padding: 0rem;
+    margin: 0rem; }
 
-.container.mt-3 h3 {
+.carruText {
+  width: 400px;
+  display: inline-block; }
+
+.carruText h2 {
+  font-size: 5rem; }
+
+.carruText h3 {
   font-size: 5rem;
   font-style: #fff; }
 
-.container.mt-3 p {
+.carruText p {
   font-size: 3rem; }
-
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  top: 7%;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center; }
 
 #about {
   display: grid;
@@ -8007,16 +8003,17 @@ footer {
     margin-right: 4rem !important; }
   .intro-text h1 {
     margin-top: 2rem; }
-  .container.mt-3 h3 {
-    font-size: 2.7rem; }
-  .container.mt-3 p {
-    font-size: 1.5rem; }
+  .container-fluid h3, .container-sm h3, .container-md h3, .container-lg h3, .container-xl h3 {
+    font-size: 4rem !important; }
+  .container-fluid p, .container-sm p, .container-md p, .container-lg p, .container-xl p {
+    font-size: 3rem !important; }
   #contact {
     padding: 1.5rem 0; }
   body .testimonial {
     padding: 35px 0; }
   .registForm h1 {
-    font-size: 6vh; }
+    font-size: 4.5vh;
+    margin: 3rem; }
   .registForm h2 {
     font-size: 4vh; }
   .registForm h3 {
@@ -8057,10 +8054,16 @@ footer {
     transform: scale(1.5, 1.5); }
   .contact-icon {
     width: auto; }
-  .container.mt-3 h3 {
-    font-size: 2.2rem; }
-  .container.mt-3 p {
-    font-size: 1.4rem; }
+  .container-fluid h3, .container-sm h3, .container-md h3, .container-lg h3, .container-xl h3 {
+    font-size: 2.3rem !important; }
+  .container-fluid p, .container-sm p, .container-md p, .container-lg p, .container-xl p {
+    font-size: 2rem !important; }
+  .d-none {
+    display: initial !important; }
+  .carruText {
+    padding-bottom: 14rem;
+    width: 350px;
+    margin: -5rem; }
   #contact {
     padding: 1.2rem 0; }
   .contact-icon img:hover {
@@ -8070,7 +8073,7 @@ footer {
   body .testimonial .row .carousel h1 {
     font-size: 30px; }
   .registForm h1 {
-    font-size: 5vh; }
+    font-size: 4.5vh; }
   .registForm h2 {
     font-size: 4vh; }
   .registForm h3 {
@@ -8116,5 +8119,7 @@ footer {
     font-size: 2rem; }
   .heading-3 {
     font-weight: 500; }
+  .heading h2 {
+    font-size: 4.5rem; }
   section {
     padding: 1rem 2rem 5rem; } }

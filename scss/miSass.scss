@@ -427,6 +427,7 @@ body
 }
 .carruText p {
   font-size: 3rem;
+  font-weight: 900;
 }
 
 #about {
@@ -919,6 +920,11 @@ footer {
   body .testimonial {
     padding: 35px 0;
   }
+  .formCon {
+    min-height: 725px;
+    justify-content: center;
+    align-content: center;
+  }
   .registForm h1 {
     font-size: 4.5vh;
     margin: 3rem;
@@ -938,6 +944,7 @@ footer {
   }
   .registForm .container {
     margin-bottom: 3rem;
+    min-height: 715px;
   }
   .row.heading h2 {
     font-size: 35.52px;
